@@ -1,0 +1,70 @@
+<!DOCTYPE html>	  
+<html>  
+<body> 
+<script src="https://www.w3schools.com/lib/w3.js"></script>				
+<script src="https://littleflute.github.io/JavaScript/blclass.js"></script>		
+<script src="https://littleflute.github.io/JavaScript/blApp.js"></script>		
+<div id="id_div_mp4i_bat_info" >								
+<a target="_blank" href="https://github.com/littleflute/bat/edit/master/bat/mp4index/mp4i.bat">v1.3. 21 * </a>	
+<a href="..">[..]</a> <button id="id_btn_4_blApp">+++++++++++blApp+++++++++</button>	
+</div>						 
+<div id="DivCurTime"></div> 			
+<br>  
+<div id="DivButtons"> 				
+<button onclick="play('01 Amber Jean.mp3')">1:01 Amber Jean.mp3</button> 
+<button onclick="play('02 Are You Ready For The Country.mp3')">2:02 Are You Ready For The Country.mp3</button> 
+<button onclick="play('03 It Might Have Been.mp3')">3:03 It Might Have Been.mp3</button> 
+<button onclick="play('04 Bound For Glory.mp3')">4:04 Bound For Glory.mp3</button> 
+<button onclick="play('05 Let Your Fingers Do The Walking.mp3')">5:05 Let Your Fingers Do The Walking.mp3</button> 
+<button onclick="play('06 Flying On The Ground Is Wrong.mp3')">6:06 Flying On The Ground Is Wrong.mp3</button> 
+<button onclick="play('07 Motor City.mp3')">7:07 Motor City.mp3</button> 
+<button onclick="play('08 Soul Of A Woman.mp3')">8:08 Soul Of A Woman.mp3</button> 
+<button onclick="play('09 Get Back To The Country.mp3')">9:09 Get Back To The Country.mp3</button> 
+<button onclick="play('10 Southern Pacific.mp3')">10:10 Southern Pacific.mp3</button> 
+<br> 
+<button onclick="play('11 Nothing Is Perfect.mp3')">11:11 Nothing Is Perfect.mp3</button> 
+<button onclick="play('12 GREY RIDERS - NEIL YOUNG INTERNATIONAL HARVESTERS.mp3')">12:12 GREY RIDERS - NEIL YOUNG INTERNATIONAL HARVESTERS.mp3</button> 
+ </div> 			
+<br> 	
+<div id="id_div_4_gif" style="border:1px solid green;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_jpg" style="border:1px solid blue;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_png" style="border:1px solid blue;" >				
+</div> 								 
+<br> 	
+<div id="id_div_4_lrcJS" style="border:1px solid red;display: none;" >		
+</div> 								
+<script>  
+var str4V = '<video id="myVideo" width="720" height="480" controls> ';				
+str4V += '<source src="v1.mp4" type="video/mp4">Your browser does not support HTML5 video.'; 	
+str4V += '</video>';  										
+var md4v = blo0.blMDiv(document.body,"id_mdiv_4_myVideo" , str4V , 300,100,500,400,blColor[1]); 	
+var vid = document.getElementById("myVideo"); 
+function play(i) {
+    vid.src=i; 
+    vid.load();
+    vid.play(); 
+}
+function getCurTime() {  
+   document.getElementById("DivCurTime").innerHTML= vid.currentTime; 
+}   
+function setCurTime(t) { 
+   vid.currentTime=t;  
+   getCurTime();
+}  
+function moveMS(ms) { 
+  vid.currentTime+=ms;
+  getCurTime();  
+}   
+var _loadScript = function (id,src){					
+var	r = document.createElement("script");				
+r.id = id;								
+r.src = src; 								
+document.body.appendChild(r);						
+}									
+_loadScript ("id_script_plx","plx.js");				
+</script> 
+</body> 
