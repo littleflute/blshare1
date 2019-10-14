@@ -1,0 +1,80 @@
+<!DOCTYPE html>	  
+<html>  
+<body> 
+<script src="https://www.w3schools.com/lib/w3.js"></script>				
+<script src="https://littleflute.github.io/JavaScript/blclass.js"></script>		
+<script src="https://littleflute.github.io/JavaScript/blApp.js"></script>		
+<div id="id_div_mp4i_bat_info" >								
+<a target="_blank" href="https://github.com/littleflute/bat/edit/master/bat/mp4index/mp4i.bat">v1.3. 21 * </a>	
+<a href="..">[..]</a> <button id="id_btn_4_blApp">+++++++++++blApp+++++++++</button>	
+</div>						 
+<div id="DivCurTime"></div> 			
+<br>  
+<div id="DivButtons"> 				
+<button onclick="play('Track 01.mp3')">1:Track 01.mp3</button> 
+<button onclick="play('Track 02.mp3')">2:Track 02.mp3</button> 
+<button onclick="play('Track 03.mp3')">3:Track 03.mp3</button> 
+<button onclick="play('Track 04.mp3')">4:Track 04.mp3</button> 
+<button onclick="play('Track 05.mp3')">5:Track 05.mp3</button> 
+<button onclick="play('Track 06.mp3')">6:Track 06.mp3</button> 
+<button onclick="play('Track 07.mp3')">7:Track 07.mp3</button> 
+<button onclick="play('Track 08.mp3')">8:Track 08.mp3</button> 
+<button onclick="play('Track 09.mp3')">9:Track 09.mp3</button> 
+<button onclick="play('Track 10.mp3')">10:Track 10.mp3</button> 
+<br> 
+<button onclick="play('Track 11.mp3')">11:Track 11.mp3</button> 
+<button onclick="play('Track 12.mp3')">12:Track 12.mp3</button> 
+<button onclick="play('Track 13.mp3')">13:Track 13.mp3</button> 
+<button onclick="play('Track 14.mp3')">14:Track 14.mp3</button> 
+<button onclick="play('Track 15.mp3')">15:Track 15.mp3</button> 
+<button onclick="play('Track 16.mp3')">16:Track 16.mp3</button> 
+<button onclick="play('Track 17.mp3')">17:Track 17.mp3</button> 
+<button onclick="play('Track 18.mp3')">18:Track 18.mp3</button> 
+<button onclick="play('Track 19.mp3')">19:Track 19.mp3</button> 
+<button onclick="play('Track 20.mp3')">20:Track 20.mp3</button> 
+<br> 
+<button onclick="play('Track 21.mp3')">21:Track 21.mp3</button> 
+ </div> 			
+<br> 	
+<div id="id_div_4_gif" style="border:1px solid green;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_jpg" style="border:1px solid blue;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_png" style="border:1px solid blue;" >				
+</div> 								 
+<br> 	
+<div id="id_div_4_lrcJS" style="border:1px solid red;display: none;" >		
+</div> 								
+<script>  
+var str4V = '<video id="myVideo" width="720" height="480" controls> ';				
+str4V += '<source src="v1.mp4" type="video/mp4">Your browser does not support HTML5 video.'; 	
+str4V += '</video>';  										
+var md4v = blo0.blMDiv(document.body,"id_mdiv_4_myVideo" , str4V , 300,100,500,400,blColor[1]); 	
+var vid = document.getElementById("myVideo"); 
+function play(i) {
+    vid.src=i; 
+    vid.load();
+    vid.play(); 
+}
+function getCurTime() {  
+   document.getElementById("DivCurTime").innerHTML= vid.currentTime; 
+}   
+function setCurTime(t) { 
+   vid.currentTime=t;  
+   getCurTime();
+}  
+function moveMS(ms) { 
+  vid.currentTime+=ms;
+  getCurTime();  
+}   
+var _loadScript = function (id,src){					
+var	r = document.createElement("script");				
+r.id = id;								
+r.src = src; 								
+document.body.appendChild(r);						
+}									
+_loadScript ("id_script_plx","plx.js");				
+</script> 
+</body> 
